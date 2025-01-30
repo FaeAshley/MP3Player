@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP3 Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="player-container">
+        <!-- 🎵 Song Details -->
+        <div class="song-info">
+            <img id="cover-art" src="default-cover.jpg" alt="Album Cover">
+            <h2 id="song-title">Song Title</h2>
+            <h3 id="song-artist">Artist Name</h3>
+        </div>
+
+        <!-- 🎚️ Progress Bar -->
+        <div class="progress-container">
+            <span id="current-time">0:00</span>
+            <div class="progress-bar" id="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <span id="total-duration">0:00</span>
+        </div>
+
+        <!-- ⏯️ Controls -->
+        <div class="controls">
+            <button id="prev-btn" onclick="playPrevSong()">⏮️</button>
+            <button id="play-btn" >▶️</button>
+            <button id="pause-btn" class="hidden" onclick="pauseSong()">⏸️</button>
+            <button id="next-btn" onclick="playNextSong()">⏭️</button>
+            <button id="shuffle-btn" onclick="shuffleSongs()">🔀</button>
+        </div>
+
+        <!-- 📜 Playlist -->
+        <div class="playlist-container">
+            <h3>Playlist</h3>
+            <ul class="playlist">
+                <!-- Songs will be dynamically added here -->
+            </ul>
+        </div>
+
+        <!-- 🎵 Audio Element -->
+        <audio id="audio-player" src=""></audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
